@@ -28,13 +28,14 @@ npm install
 Create a `.env` file in the root directory and add your Google Books API key:
 ```
 GOOGLE_BOOKS_API_KEY=your_google_api_key_here
+PORT=5050 # Optional port override; the default is 5000
 ```
 
 #### **Run the Server**
 ```sh
 node server.js
 ```
-The API will be available at `http://localhost:5050`.
+The API will be available at `http://localhost:5000` (or whatever port you set in your `.env`).
 
 ---
 ## 📡 API Endpoints
@@ -99,8 +100,8 @@ To deploy on **Render**:
 3. Set **Build Command**: `npm install`
 4. Set **Start Command**: `node server.js`
 5. Add Environment Variables:
-   - `PORT=5050`
    - `GOOGLE_BOOKS_API_KEY=your_google_api_key_here`
+   - `PORT=5050` (Optional port override; the default is 5000)
 6. Click **Deploy**!
 
 ---
